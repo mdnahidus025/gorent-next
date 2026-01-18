@@ -1,5 +1,4 @@
-"use client"
-import { usePathname } from "next/navigation";
+"use client";
 import { useEffect, useState, useCallback } from "react";
 function throttle<T extends (...args: unknown[]) => void>(
     fn: T,
@@ -26,20 +25,17 @@ const ScrollToTop = () => {
             setVisible(false);
         }
     }, []);
-    const pathName = usePathname();
 
-    // Scroll to top when route changes
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, [pathName]);
     useEffect(() => {
         const throttledScroll = throttle(toggleVisibility, 200);
-
         window.addEventListener("scroll", throttledScroll);
         return () => {
             window.removeEventListener("scroll", throttledScroll);
         };
     }, [toggleVisibility]);
+
+
+
 
     const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
@@ -47,11 +43,7 @@ const ScrollToTop = () => {
     };
 
     return (
-        <a
-            href="#"
-            onClick={handleScrollToTop}
-            className={`scroll-to-top ${visible ? "show" : ""}`}
-        >
+        <a href="#" onClick={handleScrollToTop} className={`scroll-to-top ${visible ? "show" : ""}`}>
             <span className="scroll-to-top__wrapper">
                 <span className="scroll-to-top__inner"></span>
             </span>

@@ -1,4 +1,4 @@
-"use client"
+
 import Link from 'next/link';
 import React from 'react';
 
@@ -20,8 +20,7 @@ const LetsTalk: React.FC = () => {
                             </Link>
                         </div>
                         <div className="lets-talk__btn-2">
-                            <Link href="/inner/car-list-v-1" className="thm-btn">Rent Now<span
-                                className="fas fa-arrow-right"></span></Link>
+                            <Link href="/inner/car-list-v-1" className="thm-btn">Rent Now<span className="fas fa-arrow-right"></span></Link>
                         </div>
                     </div>
                 </div>
