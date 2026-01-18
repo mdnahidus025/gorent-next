@@ -1,7 +1,4 @@
-import processBg1 from "../../../public/assets/images/backgrounds/process-one-single-bg-1.jpg";
-import processBg2 from "../../../public/assets/images/backgrounds/process-one-single-bg-2.jpg";
-import processBg3 from "../../../public/assets/images/backgrounds/process-one-single-bg-3.jpg";
-import processBg4 from "../../../public/assets/images/backgrounds/process-one-single-bg-4.jpg";
+
 import type { PricingPlanThree, ProcessStep } from "./prosessType";
 import pricingImg1 from '../../../public/assets/images/resources/pricing-2-1.png';
 import pricingImg2 from '../../../public/assets/images/resources/pricing-2-2.png';
@@ -14,32 +11,28 @@ export const processSteps: ProcessStep[] = [
         title: "Choose A Car",
         description:
             "Open multipy a green form lesser their from in made herb multiply",
-        icon: "icon-car-wash",
-        bg: processBg1,
+        icon: "icon-car-wash", 
     },
     {
         id: 2,
         title: "Come In Contact",
         description:
             "Open multipy a green form lesser their from in made herb multiply",
-        icon: "icon-in-person",
-        bg: processBg2,
+        icon: "icon-in-person", 
     },
     {
         id: 3,
         title: "Pick-Up Locations",
         description:
             "Open multipy a green form lesser their from in made herb multiply",
-        icon: "icon-car-insurance",
-        bg: processBg3,
+        icon: "icon-car-insurance", 
     },
     {
         id: 4,
         title: "Enjoy Driving",
         description:
             "Open multipy a green form lesser their from in made herb multiply",
-        icon: "icon-steering-wheel",
-        bg: processBg4,
+        icon: "icon-steering-wheel", 
     },
 ];
  

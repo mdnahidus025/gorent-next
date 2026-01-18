@@ -4,8 +4,7 @@ export interface ProcessStep {
     id: number;
     title: string;
     description: string;
-    icon: string;
-    bg: string | StaticImageData;
+    icon: string; 
 }
 export interface PricingPlanThree {
     id: number;

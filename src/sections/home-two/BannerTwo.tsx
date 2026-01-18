@@ -71,7 +71,7 @@ const BannerTwo: React.FC = () => {
                 >
                     {
                         mainSliderTwoData.map((item, index) => (
-                            <SwiperSlide key={item.id || index}>
+                            <SwiperSlide key={item?.id || index}>
                                 <div className={`item bannerTwoBg-${item?.id} ${index === activeIndex ? "active" : ""}`}>
                                     <div className="main-slider-two__bg"> </div>
                                     <div className="main-slider-two__overly"></div>
@@ -83,7 +83,7 @@ const BannerTwo: React.FC = () => {
                                             <div className="main-slider-two__sub-title-box">
                                                 <p className="main-slider-two__sub-title">{item?.subTitle}</p>
                                             </div>
-                                            <h2 className="main-slider-two__title">{item?.titleStart} <br /> <span>{item.TitleHighlight}</span> {item?.titleEnd}</h2>
+                                            <h2 className="main-slider-two__title">{item?.titleStart} <br /> <span>{item?.TitleHighlight}</span> {item?.titleEnd}</h2>
                                             <p className="main-slider-two__text">
                                                 Lorem ipsum is simply ipun txns mane so dummy text of free
                                                 <br />

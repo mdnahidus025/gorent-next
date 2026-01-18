@@ -45,11 +45,11 @@ const WhychooseOne: React.FC = () => {
                             >
                                 <div className="why-choose-one__single">
                                     <div className="why-choose-one__icon">
-                                        <span className={item.icon}></span>
+                                        <span className={item?.icon}></span>
                                     </div>
                                     <div className="why-choose-one__single-inner">
-                                        <h3 className="why-choose-one__title">{item.title}</h3>
-                                        <p className="why-choose-one__text">{item.text} </p>
+                                        <h3 className="why-choose-one__title">{item?.title}</h3>
+                                        <p className="why-choose-one__text">{item?.text} </p>
                                     </div>
                                     <div className="why-choose-one__btn-box">
                                         <Link href={"/inner/listing-single"} className="thm-btn"> Rent Now<span className="fas fa-arrow-right"></span> </Link>

@@ -68,12 +68,12 @@ const BrandTwo: React.FC = () => {
                                     }}
                                 >
                                     {brands.map((brand) => (
-                                        <SwiperSlide key={brand.id}>
+                                        <SwiperSlide key={brand?.id}>
                                             <div className="item" >
                                                 <div className="brand-two__single">
                                                     <div className="brand-two__img">
-                                                        <Link href={brand.link}>
-                                                            <Image src={brand.image} width={256} height={150} alt="Brand logo" />
+                                                        <Link href={brand?.link}>
+                                                            <Image src={brand?.image} width={256} height={150} alt="Brand logo" />
                                                         </Link>
                                                     </div>
                                                 </div>

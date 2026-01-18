@@ -21,6 +21,14 @@ export interface TestimonialTwo {
 
 
 
+export interface TestimonialThree {
+    id: number;
+    image: string | StaticImageData;
+    name: string;
+    role: string;
+    text: string;
+    rating: number;
+}
 
 
 

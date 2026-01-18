@@ -11,9 +11,10 @@ import t3 from "../../../public/assets/images/testimonial/testimonial-2-3.jpg";
 import t4 from "../../../public/assets/images/testimonial/testimonial-2-4.jpg";
 import t5 from "../../../public/assets/images/testimonial/testimonial-2-5.jpg";
 import t6 from "../../../public/assets/images/testimonial/testimonial-2-6.jpg";
-import type { TestimonialItem, TestimonialTwo } from "./testimonialsType";
-
-
+import type { TestimonialItem, TestimonialThree, TestimonialTwo } from "./testimonialsType";
+import testi1 from '../../../public/assets/images/testimonial/testimonial-3-1.jpg';
+import testi2 from '../../../public/assets/images/testimonial/testimonial-3-2.jpg';
+import testi3 from '../../../public/assets/images/testimonial/testimonial-3-3.jpg'; 
 
 
 export const testimonialData: TestimonialItem[] = [
@@ -139,8 +140,42 @@ export const testimonialsTwo: TestimonialTwo[] = [
 ];
 
 
-
-
+// Data
+export const testimonialsDataThree: TestimonialThree[] = [
+    {
+        id: 1,
+        image: testi1,
+        name: 'Alisa Fox',
+        role: 'Founder',
+        rating: 5,
+        text: `I have been using Rentaly for my Car Rental needs for over 5 years now.
+        I have never had any problems with their service. Their customer support is
+        always responsive and helpful. I would recommend Rentaly to anyone looking
+        for a reliable Car Rental provider.`,
+    },
+    {
+        id: 2,
+        image: testi2,
+        name: 'Robert Son',
+        role: 'Founder',
+        rating: 5,
+        text: `We have been using Rentaly for our trips needs for several years now
+        and have always been happy with their service. Their customer support is
+        Excellent Service! and they are always available to help with any issues
+        we have. Their prices are also very competitive.`,
+    },
+    {
+        id: 3,
+        image: testi3,
+        name: 'Danil Aarth',
+        role: 'Founder',
+        rating: 5,
+        text: `We have been using Rentaly for our trips needs for several years now
+        and have always been happy with their service. Their customer support is
+        Excellent Service! and they are always available to help with any issues
+        we have. Their prices are also very competitive.`,
+    },
+];
 
 
 

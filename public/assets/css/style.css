@@ -3302,13 +3302,15 @@ xs sidebar
 }
 
 
-.bannerTwoBg-1 .main-slider-two__bg{
+.bannerTwoBg-1 .main-slider-two__bg {
   background-image: url("../images/backgrounds/slider-2-1.jpg");
 }
-.bannerTwoBg-2 .main-slider-two__bg{
+
+.bannerTwoBg-2 .main-slider-two__bg {
   background-image: url("../images/backgrounds/slider-2-2.jpg");
 }
-.bannerTwoBg-3 .main-slider-two__bg{
+
+.bannerTwoBg-3 .main-slider-two__bg {
   background-image: url("../images/backgrounds/slider-2-3.jpg");
 }
 
@@ -8941,10 +8943,11 @@ Error Page
   z-index: -1;
 }
 
-.feature-one__inner-single .bgImage-1{
+.feature-one__inner-single .bgImage-1 {
   background-image: url("../images/backgrounds/feature-one-bg-1.jpg");
 }
-.feature-one__inner-single .bgImage-2{
+
+.feature-one__inner-single .bgImage-2 {
   background-image: url("../images/backgrounds/feature-one-bg-2.jpg");
 }
 
@@ -12669,7 +12672,6 @@ Error Page
 }
 
 .process-one__single-bg {
-  /* background-image: url('../images/shapes/process-one-single-bg.png'); */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -12681,6 +12683,23 @@ Error Page
   opacity: .05;
   z-index: -1;
 }
+
+.process-one__single .bgImage-1 {
+  background-image: url("../images/backgrounds/process-one-single-bg-1.jpg");
+}
+
+.process-one__single .bgImage-2 {
+  background-image: url("../images/backgrounds/process-one-single-bg-2.jpg");
+}
+
+.process-one__single .bgImage-3 {
+  background-image: url("../images/backgrounds/process-one-single-bg-3.jpg");
+}
+
+.process-one__single .bgImage-4 {
+  background-image: url("../images/backgrounds/process-one-single-bg-4.jpg");
+}
+
 
 .process-one__icon-box {
   position: relative;
