@@ -23,7 +23,7 @@ const WhychooseOne: React.FC = () => {
                     <div className="section-title text-center sec-title-animation animation-style2">
                         <div className="section-title__tagline-box justify-content-center">
                             <div className="section-title__tagline-shape">
-                                <Image src={sectionTitleShape} width={70} height={21} alt="" />
+                                <Image src={sectionTitleShape} width={70} height={21} loading="eager" alt="" />
                             </div>
                             <span className="section-title__tagline">Why Choose Us</span>
                         </div>
@@ -38,7 +38,7 @@ const WhychooseOne: React.FC = () => {
                                 initial={{ y: item?.id % 2 === 0 ? 20 : -20, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 transition={{
-                                    duration: 0.2 * i + 1,
+                                    duration: 0.2 * (i + 1),
                                     ease: "easeOut"
                                 }}
                                 viewport={{ amount: 0.5, once: true }}
@@ -68,7 +68,7 @@ const WhychooseOne: React.FC = () => {
                                 <div className="section-title text-left sec-title-animation animation-style1">
                                     <div className="section-title__tagline-box">
                                         <div className="section-title__tagline-shape">
-                                            <Image src={sectionTitleShape} alt="" />
+                                            <Image src={sectionTitleShape} width={70} height={21} loading="eager" alt="" />
                                         </div>
                                         <span className="section-title__tagline">fun facts</span>
                                     </div>
@@ -123,16 +123,16 @@ const WhychooseOne: React.FC = () => {
                                 className="counter-one__right">
                                 <div className="counter-one__img-box">
                                     <div className="counter-one__img ">
-                                        <Image src={counterImg1} width={570} height={600} alt="" />
+                                        <Image src={counterImg1} width={570} height={600} loading="eager" alt="" />
                                     </div>
                                     <div className="counter-one__img-two ">
-                                        <Image src={counterImg2} width={570} height={600} alt="" />
+                                        <Image src={counterImg2} width={570} height={600} loading="eager" alt="" />
                                     </div>
                                     <div className="counter-one__dot-1">
-                                        <Image src={counterDot1} width={68} height={236} alt="" />
+                                        <Image src={counterDot1} width={68} height={236} loading="eager" alt="" />
                                     </div>
                                     <div className="counter-one__dot-2 float-bob-y">
-                                        <Image src={counterDot2} width={68} height={236} alt="" />
+                                        <Image src={counterDot2} width={68} height={236} loading="eager" alt="" />
                                     </div> 
                                 </div>
                             </motion.div>

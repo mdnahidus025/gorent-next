@@ -54,9 +54,11 @@ const OurBlog: React.FC = () => {
                                     <div className="blog-one__single">
                                         <div className="blog-one__img-box">
                                             <div className="blog-one__img">
-                                                <Image src={blog.image} width={370} height={250} alt={blog.title} />
+                                                {
+                                                    blog.image && (<Image src={blog.image} width={370} height={250} alt={blog.title} />) 
+                                                }
                                                 <div className="blog-one__tags">
-                                                    <span>{blog.tag}</span>
+                                                    <span>{blog?.tag}</span>
                                                 </div>
                                             </div>
                                             <div className="blog-one__date">

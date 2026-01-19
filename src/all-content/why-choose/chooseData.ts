@@ -1,8 +1,5 @@
 import type { CounterItem, WhyChooseItem } from "./chooseType";
 
-
-
-
 export const whyChooseData: WhyChooseItem[] = [
     {
         id: 1,

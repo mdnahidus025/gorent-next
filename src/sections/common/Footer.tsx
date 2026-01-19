@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                                         Imaginative Tech.</p>
                                     <form className="footer-widget__form" onSubmit={handlSubmit}>
                                         <div className="footer-widget__input">
-                                            <input type="email" placeholder="Your Email" />
+                                            <input type="email" name='email' placeholder="Your Email" />
                                         </div>
                                         <button type="submit" className="footer-widget__btn"><i
                                             className="icon-right-arrow"></i></button>
