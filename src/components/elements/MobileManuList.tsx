@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { motion } from "framer-motion"
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -15,6 +15,9 @@ const MobileManuList: React.FC = () => {
     const [isShop, setIsShop] = useState<boolean>(false);
     const [isBlog, setIsBlog] = useState<boolean>(false);
     const pathName = usePathname();
+    const findLocation = (array: NavItem[]): boolean => {
+        return array.some(item => item?.link === pathName);
+    };
     const closeMobileManu = () => {
         setIsMobileManu(false)
         setIsHome(false)
@@ -26,7 +29,7 @@ const MobileManuList: React.FC = () => {
     return (
         <ul className="main-menu__list mobileManulist">
             <li className="dropdown">
-                <a href="#" className={`${isHome ? "expanded" : ""}`}>
+                <a href="#" className={`${isHome || findLocation(home_link) ? "expanded" : ""}`}>
                     Home
                     <button className={`${isHome ? "expanded" : ""}`} onClick={() => setIsHome((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button>
                 </a>
@@ -53,7 +56,7 @@ const MobileManuList: React.FC = () => {
                 <Link href="/inner/about">About Us</Link>
             </li>
             <li className="dropdown">
-                <a href="#" className={`${isPages ? "expanded" : ""}`}>
+                <a href="#" className={`${isPages || findLocation(pages_link) ? "expanded" : ""}`}>
                     Pages
                     <button onClick={() => setIsPages((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button>
                 </a>
@@ -77,7 +80,7 @@ const MobileManuList: React.FC = () => {
                 </ul>
             </li>
             <li className="dropdown">
-                <a href="#" className={`${isCars ? "expanded" : ""}`}>
+                <a href="#" className={`${isCars || findLocation(cars_link) ? "expanded" : ""}`}>
                     Cars
                     <button className={`${isCars ? "expanded" : ""}`} onClick={() => setIsCars((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button>
                 </a>
@@ -101,7 +104,7 @@ const MobileManuList: React.FC = () => {
                 </ul>
             </li>
             <li className="dropdown">
-                <a href="#" className={`${isShop ? "expanded" : ""}`}>
+                <a href="#" className={`${isShop || findLocation(shops_link) ? "expanded" : ""}`}>
                     Shop
                     <button className={`${isShop ? "expanded" : ""}`} onClick={() => setIsShop((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button>
 
@@ -126,7 +129,7 @@ const MobileManuList: React.FC = () => {
                 </ul>
             </li>
             <li className="dropdown">
-                <a href="#" className={`${isBlog ? "expanded" : ""}`}>
+                <a href="#" className={`${isBlog || findLocation(blogs_link) ? "expanded" : ""}`}>
                     Blog
                     <button className={`${isBlog ? "expanded" : ""}`} onClick={() => setIsBlog((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button>
                 </a>

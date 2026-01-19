@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import logoTwo from "../../../public/assets/images/resources/logo-2.png"; 
+import logoTwo from "../../../public/assets/images/resources/logo-2.png";
 import useGorentContext from '../context/useGorentContext';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -22,17 +22,17 @@ const MobileNav: React.FC = () => {
                 <span className="mobile-nav__close mobile-nav__toggler" onClick={() => setIsMobileManu((pre) => (!pre))}><i className="fa fa-times"></i></span>
 
                 <div className="logo-box">
-                    <Link href="/" aria-label="logo image">
+                    <Link href="/" aria-label="logo image" onClick={() => setIsMobileManu((pre) => (!pre))}>
                         <Image src={logoTwo} alt="Logo" />
                     </Link>
                 </div>
                 <div className="mobile-nav__container">
                     {
                         isOnePage ? <MobileManuListSingle onePageManuListProp={
-                            currentPath === "/index-one-page" ? onePageManuListOne : currentPath === "/index-two-one-page" ? onePageManuListTwo : onePageManuListThree} /> 
-                        : <MobileManuList />
+                            currentPath === "/index-one-page" ? onePageManuListOne : currentPath === "/index-two-one-page" ? onePageManuListTwo : onePageManuListThree} />
+                            : <MobileManuList />
                     }
-                    
+
                 </div>
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>

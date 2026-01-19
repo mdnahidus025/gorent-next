@@ -3,24 +3,10 @@ import Banner from '@/sections/common/Banner';
 import Link from 'next/link';
 import React, { type FormEvent } from 'react';
 
-// interface LoginFormData {
-//     email: string;
-//     password: string;
-//     rememberMe: boolean;
-// }
-
 const page: React.FC = () => {
-
     const handleLogin = (e: FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
-
         const form = e.target as HTMLFormElement;
-        // const formData = new FormData(form);
-
-        // const loginData: LoginFormData = {
-        //     email: formData.get('form_email') as string,
-        //     password: formData.get('form_password') as string, 
-        // };
         form.reset();
     };
 
@@ -89,7 +75,6 @@ const page: React.FC = () => {
                                         <a href="#">Forget password?</a>
                                     </div>
                                 </div>
-
                                 <div className="create-account text-center">
                                     <p>Not registered yet? <Link href={"/inner/sign-up"}>Create an Account</Link></p>
                                 </div>
