@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { motion } from "framer-motion"
-import sectionTitleShape from "../../../public/assets/images/shapes/section-title-tagline-shape-1.png"; 
+import sectionTitleShape from "../../../public/assets/images/shapes/section-title-tagline-shape-1.png";
 import Image from 'next/image';
 import TextAnimation from '@/components/elements/TextAnimation';
 import { processSteps } from '@/all-content/process/prosessdata';
@@ -36,10 +36,7 @@ const ProcessTwo: React.FC = () => {
                             className={`col-xl-3 col-lg-6 col-md-6 wow `}
                         >
                             <div className="process-one__single">
-                                <div
-                                    className="process-one__single-bg"
-                                    style={{ backgroundImage: `url(${step.bg})` }}
-                                />
+                                <div className={`process-one__single-bg bgImage-${step?.id}`}></div>
 
                                 <div className="process-one__icon-box">
                                     <div className="process-one__icon-shape"></div>
