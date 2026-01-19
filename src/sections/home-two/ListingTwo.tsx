@@ -1,15 +1,13 @@
 "use client"
-import React from 'react'; 
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import titleImg from "../../../public/assets/images/shapes/section-title-tagline-shape-1.png"; 
+import titleImg from "../../../public/assets/images/shapes/section-title-tagline-shape-1.png";
 import Image from 'next/image';
 import TextAnimation from '@/components/elements/TextAnimation';
 import { carListTwo } from '@/all-content/listing/Lictingdata';
 import { CarItemTwo } from '@/all-content/listing/listType';
 import Link from 'next/link';
-
-
 
 const ListingTwo: React.FC = () => {
     return (
@@ -52,30 +50,32 @@ const ListingTwo: React.FC = () => {
                     }}
                 >
                     {carListTwo.map((car: CarItemTwo) => (
-                        <SwiperSlide key={car.id}>
+                        <SwiperSlide key={car?.id}>
                             <div className="item">
                                 <div className="listing-two__single mx-2 my-3">
                                     <div className="listing-two__img-box">
                                         <div className="listing-two__img">
-                                            <Image src={car.image} width={302} height={251} alt={car.title} />
+                                            {
+                                                car?.image && (<Image src={car?.image} width={302} height={251} alt={car.title} />)
+                                            }
                                         </div>
                                     </div>
 
                                     <div className="listing-two__content">
-                                        <p className="listing-two__sub-title">{car.category}</p>
+                                        <p className="listing-two__sub-title">{car?.category}</p>
 
                                         <h3 className="listing-two__title">
-                                            <Link href={car.link}>{car.title}</Link>
+                                            <Link href={car?.link}>{car?.title}</Link>
                                         </h3>
 
                                         <div className="listing-two__price-and-btn">
                                             <div className="listing-two__price-box">
                                                 <span>From</span>
-                                                <p>{car.price}</p>
+                                                <p>{car?.price}</p>
                                             </div>
 
                                             <div className="listing-two__btn-box">
-                                                <Link href={car.link} className="thm-btn">
+                                                <Link href={car?.link} className="thm-btn">
                                                     Book Now
                                                 </Link>
                                             </div>
